@@ -1,6 +1,6 @@
 # Prática: reprodução de áudio no STM32F4-Discovery
 
-Este repositório acompanha o [roteiro impresso em PDF](relatorio/main.pdf). Use esta página como índice dos arquivos e como consulta rápida antes de cada ensaio. Os procedimentos de compilação, gravação e audição devem ser realizados na bancada e anotados na ficha de resultados do roteiro.
+Este repositório acompanha o [roteiro impresso em PDF](<roteiro discovery audio playback.pdf>). Use esta página como índice dos arquivos e como consulta rápida antes de cada ensaio. Os procedimentos de compilação, gravação e audição devem ser realizados na bancada e anotados na ficha de resultados do roteiro.
 
 Repositório Git: [github.com/amarconn/audio-pendrive-stm32](https://github.com/amarconn/audio-pendrive-stm32).
 
@@ -12,11 +12,9 @@ Repositório Git: [github.com/amarconn/audio-pendrive-stm32](https://github.com/
 | `STM32F4-Discovery_FW_V1.1.0/Project/Audio_playback_and_record/TrueSTUDIO/MEDIA_InFLASH/` | Exemplo original com áudio embutido na Flash. |
 | `STM32F4-Discovery_FW_V1.1.0/Project/Audio_playback_and_record/TrueSTUDIO/MEDIA_USB_KEY/` | Exemplo USB Host para ler arquivo WAV no pendrive. |
 | `scripts/` | Um conversor WAV para pendrive e outro para gerar vetor C da Flash. |
-| `audio/` | WAV de entrada, saída gerada e vetor C de demonstração. |
-| `relatorio/main.pdf` | Roteiro de laboratório pronto para leitura/impressão. |
-| `relatorio/main.tex` | Fonte do relatório, para quem for manter ou editar o documento. |
-| `an3997-audio-playback-and-recording-using-the-stm32f4discovery-stmicroelectronics.pdf` | Nota de aplicação da ST usada como referência técnica. |
-| `Pratica II - Micro II 2022 (Modelo de Roteiro).zip` | Modelo LaTeX preservado como referência. |
+| `audio/` | WAVs de entrada e vetor C de demonstração. O WAV convertido para USB é gerado pelo aluno durante a prática. |
+| `roteiro discovery audio playback.pdf` | Roteiro de laboratório pronto para leitura/impressão. |
+| `referencias/` | Nota de aplicação AN3997 usada como referência técnica. |
 
 O arquivo `audio/smw_course_clear.wav` veio de [The Mushroom Kingdom — Sound Clips](https://themushroomkingdom.net/wav.shtml), site que reúne efeitos sonoros e trechos musicais de jogos do Mario em WAV. O formato original foi verificado: PCM mono, 16 bits, 22.050 Hz, 7,491 s; há um chunk `LIST` no byte 36, por isso ele não deve ser usado diretamente no leitor WAV USB do exemplo.
 
@@ -77,14 +75,10 @@ Não confie apenas na extensão `.wav`: chunks extras como `LIST` ou `JUNK` pode
 ## D. Preparar o pendrive e reproduzir
 
 1. Formate uma partição primária do pendrive como FAT32.
-2. Copie `audio/audio_usb.wav` para a raiz do pendrive e renomeie para `audio.wav`.
+2. Depois de gerar `audio/audio_usb.wav` na etapa C, copie-o para a raiz do pendrive e renomeie para `audio.wav`. Esse arquivo de saída não acompanha o repositório: ele só aparece quando o aluno executa o conversor.
 3. No firmware, confira `WAVE_NAME "0:audio.wav"` em `Project/Audio_playback_and_record/inc/main.h`. `0:` é o volume FatFs; como o caminho não tem subpasta, o WAV fica na raiz.
 4. Grave e execute `MEDIA_USB_KEY`. Aguarde o reconhecimento do dispositivo e a montagem do volume. Com `audio.wav` válido na raiz, o comando inicial PLAY tenta iniciar a reprodução.
 5. Durante a reprodução, USER alterna para RECORD, interrompendo o áudio; o acionamento seguinte retorna a PLAY. Não deixe a gravação prosseguir sem necessidade. Esse botão não funciona como play/pause no projeto USB.
 6. Registre som, LEDs, erros e resposta do botão na ficha do roteiro.
 
 O FatFs incluído configura `_MAX_SS=1024`; as leituras e transferências DMA acontecem em blocos, usando dois buffers alternados. Isso não impõe um limite geral de 1 MB ao tamanho do arquivo. Falha em abrir o volume, falha em abrir `audio.wav` e cabeçalho rejeitado têm indicações diferentes no LED vermelho; o roteiro detalha o diagnóstico.
-
-## Registro dos ensaios
-
-Preencha no papel: configuração/projeto, mensagens do build, resultado da gravação, LEDs, saída de áudio e dificuldades. Não marque como concluído um teste que não tenha sido executado na placa. Compare o exemplo original antes e depois da troca da música para localizar a origem de eventuais problemas.

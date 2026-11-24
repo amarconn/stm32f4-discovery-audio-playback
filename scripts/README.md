@@ -8,7 +8,7 @@ Execute os comandos a partir da raiz do repositório para que os caminhos relati
 python scripts/converter_audio_stm32_corrigido.py audio/smw_course_clear.wav -o audio/audio_usb.wav
 ```
 
-Saída: PCM estéreo, 16 bits, 44.100 Hz, cabeçalho WAV de 44 bytes e chunk `data` no byte 36. O script valida o cabeçalho. O firmware espera o arquivo com nome `audio.wav` na raiz do pendrive; renomeie/copiei `audio/audio_usb.wav` para esse destino.
+Esse comando cria `audio/audio_usb.wav`; o arquivo não existe antes de o aluno executar o conversor. A saída é PCM estéreo, 16 bits, 44.100 Hz, com cabeçalho WAV de 44 bytes e chunk `data` no byte 36. O script valida o cabeçalho. Depois, copie a saída para a raiz do pendrive e dê a ela o nome `audio.wav`.
 
 ## Vetor C para Flash (`MEDIA_InFLASH`)
 
