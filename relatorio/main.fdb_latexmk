@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1795563098.55051 "d:/facul/micro2/audio-pendrive-stm32/relatorio/main.tex" "main.pdf" "main" 1795563099.93692 0
+["pdflatex"] 1795563418.0403 "d:/facul/micro2/audio-pendrive-stm32/relatorio/main.tex" "main.pdf" "main" 1795563419.67015 0
   "C:/Users/arthu/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1795561578 83609 ebbc432e6cbbb238d39535255db2c8bd ""
   "C:/Users/arthu/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1789133370 13373065 186d775c7cfc2d6f9ecd433fe4efe81e ""
   "C:/Users/arthu/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -11,6 +11,7 @@
   "C:/Users/arthu/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/helvetic/phvr8r.tfm" 1136783054 4712 9ef4d7d106579d4b136e1529e1a4533c ""
   "C:/Users/arthu/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/helvetic/phvr8t.tfm" 1136783054 7040 b2bd27e2bfe6f6948cbc3239cae7444f ""
   "C:/Users/arthu/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/palatino/pplb7t.tfm" 1136783054 1616 371d1ee60c04b008c8fd760060cd34f1 ""
+  "C:/Users/arthu/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/palatino/pplb8r.tfm" 1136783054 2532 9ad73cf4dd2173a847f2a5f5608e0b9a ""
   "C:/Users/arthu/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/palatino/pplb8t.tfm" 1136783054 3456 16dd534f88eb2bd21ebc7203786b436e ""
   "C:/Users/arthu/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/palatino/pplbi7t.tfm" 1136783054 1816 bb70e8d3600ea56abb211fdcc6909bf3 ""
   "C:/Users/arthu/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/palatino/pplbi8t.tfm" 1136783054 3788 23f75d701871fed6ba2bf32f67976132 ""
@@ -47,6 +48,7 @@
   "C:/Users/arthu/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb" 1136846148 45758 19968a0990191524e34e1994d4a31cb6 ""
   "C:/Users/arthu/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb" 1136864148 35941 adef23a721dd8354a4a2bf4434f1c484 ""
   "C:/Users/arthu/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb" 1136864148 44648 23115b2a545ebfe2c526c3ca99db8b95 ""
+  "C:/Users/arthu/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb" 1136864148 52406 dad2f72863a03727d5f536c64a69c452 ""
   "C:/Users/arthu/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb" 1136864148 52665 661b1e6b26edb5f50dd491f8a701cb57 ""
   "C:/Users/arthu/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb" 1136864148 50022 90249cba7e3e4e9845f80328d6f9bd13 ""
   "C:/Users/arthu/AppData/Local/Programs/MiKTeX/fonts/type1/urw/zapfding/uzdr.pfb" 1136864148 45955 6dfcb282cf470ceb18d57d017b7898d6 ""
@@ -54,6 +56,7 @@
   "C:/Users/arthu/AppData/Local/Programs/MiKTeX/fonts/vf/adobe/helvetic/phvb8t.vf" 1136783054 2340 0efed6a948c3c37d870e4e7ddb85c7c3 ""
   "C:/Users/arthu/AppData/Local/Programs/MiKTeX/fonts/vf/adobe/helvetic/phvbc8t.vf" 1136783054 3612 320aff978182b09b6a895dc2e8c9c6ea ""
   "C:/Users/arthu/AppData/Local/Programs/MiKTeX/fonts/vf/adobe/helvetic/phvr8t.vf" 1136783054 2344 44ff28c9ef2fc97180cd884f900fee71 ""
+  "C:/Users/arthu/AppData/Local/Programs/MiKTeX/fonts/vf/adobe/palatino/pplb8t.vf" 1136783054 2316 c3899bd8afb459a9a5a9a546bf3029a2 ""
   "C:/Users/arthu/AppData/Local/Programs/MiKTeX/fonts/vf/adobe/palatino/pplr8t.vf" 1136783054 2324 a163806de13ddf37313d2ee968aa0a98 ""
   "C:/Users/arthu/AppData/Local/Programs/MiKTeX/fonts/vf/adobe/palatino/pplri8t.vf" 1136783054 2308 5bc0a90b83a3fd7d37d34ef3b64d7e8a ""
   "C:/Users/arthu/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mkii" 1580390158 71627 94eb9990bed73c364d7f53f960cc8c5b ""
@@ -191,10 +194,10 @@
   "C:/Users/arthu/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/arthu/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
   "IEEEtran.cls" 1795563048 215482 29cf854e1a5c0c750fd57a9a753451c9 ""
-  "d:/facul/micro2/audio-pendrive-stm32/relatorio/main.tex" 1795563096 17182 f2d4fb9c0dfb3b2490c98517488b5fed ""
-  "main.aux" 1795563099 2318 a25cab03486108a90f5b045749f061b1 "pdflatex"
-  "main.out" 1795563099 2349 3bf0a6df040f0e06e58419f28010ff87 "pdflatex"
-  "main.tex" 1795563096 17182 f2d4fb9c0dfb3b2490c98517488b5fed ""
+  "d:/facul/micro2/audio-pendrive-stm32/relatorio/main.tex" 1795563415 17287 7f243c346ace7d172d621dcd36c4b605 ""
+  "main.aux" 1795563419 2318 420458e5adad4bf183e4569652ea8bd0 "pdflatex"
+  "main.out" 1795563419 2349 3bf0a6df040f0e06e58419f28010ff87 "pdflatex"
+  "main.tex" 1795563415 17287 7f243c346ace7d172d621dcd36c4b605 ""
   (generated)
   "main.aux"
   "main.log"
