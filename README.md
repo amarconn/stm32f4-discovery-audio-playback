@@ -1,6 +1,6 @@
 # Prática: reprodução de áudio no STM32F4-Discovery
 
-Este repositório acompanha o [roteiro impresso em PDF](<roteiro discovery audio playback.pdf>). Use esta página como índice dos arquivos e como consulta rápida antes de cada ensaio. Os procedimentos de compilação, gravação e audição devem ser realizados na bancada e anotados na ficha de resultados do roteiro.
+Este repositório acompanha o [roteiro impresso em PDF](<roteiro discovery audio playback.pdf>). Use esta página como índice dos arquivos e como consulta rápida para repetir os ensaios já descritos no roteiro.
 
 Repositório Git: [github.com/amarconn/audio-pendrive-stm32](https://github.com/amarconn/audio-pendrive-stm32).
 
@@ -54,7 +54,7 @@ Faça a substituição em uma cópia do projeto `MEDIA_InFLASH`:
 3. Faça Clean e Build. Confira o mapa do linker: o STM32F407VG tem 1 MiB de Flash total, compartilhado entre código e amostras. Se faltar espaço, gere menos segundos com `--seconds`.
 4. Grave a cópia do firmware e confira o áudio. Anote se o linker concluiu e o que ouviu.
 
-O arquivo `audio/smw_course_clear_flash.c` já é uma saída de exemplo gerada pelo conversor; não é evidência de reprodução física.
+O arquivo `audio/smw_course_clear_flash.c` é a saída de exemplo gerada pelo conversor e usada no ensaio de reprodução pela Flash.
 
 ## C. Converter WAV para o pendrive
 
@@ -79,6 +79,6 @@ Não confie apenas na extensão `.wav`: chunks extras como `LIST` ou `JUNK` pode
 3. No firmware, confira `WAVE_NAME "0:audio.wav"` em `Project/Audio_playback_and_record/inc/main.h`. `0:` é o volume FatFs; como o caminho não tem subpasta, o WAV fica na raiz.
 4. Grave e execute `MEDIA_USB_KEY`. Aguarde o reconhecimento do dispositivo e a montagem do volume. Com `audio.wav` válido na raiz, o comando inicial PLAY tenta iniciar a reprodução.
 5. Durante a reprodução, USER alterna para RECORD, interrompendo o áudio; o acionamento seguinte retorna a PLAY. Não deixe a gravação prosseguir sem necessidade. Esse botão não funciona como play/pause no projeto USB.
-6. Registre som, LEDs, erros e resposta do botão na ficha do roteiro.
+6. Compare o som, os LEDs e a resposta do botão com os resultados descritos no roteiro.
 
 O FatFs incluído configura `_MAX_SS=1024`; as leituras e transferências DMA acontecem em blocos, usando dois buffers alternados. Isso não impõe um limite geral de 1 MB ao tamanho do arquivo. Falha em abrir o volume, falha em abrir `audio.wav` e cabeçalho rejeitado têm indicações diferentes no LED vermelho; o roteiro detalha o diagnóstico.

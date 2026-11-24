@@ -18,4 +18,4 @@ python scripts/wav_to_flash_array.py audio/smw_course_clear.wav --seconds 5 --ou
 
 Saída: `uint16_t AUDIO_SAMPLE[]`, PCM estéreo, 16 bits, 48.000 Hz, até cinco segundos por padrão. Para esse exemplo, atualize `AUDIO_FILE_SZE` para `960000u` e mantenha `AUIDO_START_ADDRESS` em `58`. Copie o vetor apenas para uma cópia do projeto original. O linker map deve confirmar que o programa e a tabela cabem na Flash.
 
-Os conversores têm finalidades diferentes: um grava um WAV simples para FatFs; o outro emite código C para compilar junto com o firmware Flash. A conversão não substitui o ensaio de áudio na placa.
+Os conversores têm finalidades diferentes: um grava um WAV simples para FatFs; o outro emite código C para compilar junto com o firmware Flash. As duas saídas foram usadas nos respectivos ensaios de reprodução descritos no PDF do roteiro.
